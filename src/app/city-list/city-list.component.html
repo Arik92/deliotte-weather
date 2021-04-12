@@ -1,0 +1,14 @@
+<div class="list">
+  <div class="header"><h2>Weather In:</h2></div>
+  <div class="city" *ngFor="let city of cityList;let i=index"> 
+    <div class="index">{{ i+1 }}.</div>
+    <div class="name">{{city.name | titlecase}}</div>
+    <div class="temp-unit">
+      <span *ngIf="city.temperature > 0">+</span>
+      {{city.temperature}}
+      {{city.unit}};
+    </div>
+    
+    <div class="description">{{city.description}}</div>
+  </div>
+</div>

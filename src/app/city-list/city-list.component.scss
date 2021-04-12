@@ -1,0 +1,24 @@
+.list {    
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    top: 0;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    .city {
+        width: 70%;
+        margin-left: 15%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .index, .name, .temp-unit, .description {
+            width: 20%;            
+        }
+        .index, .name, .temp-unit {
+            margin-right: 2%;           
+        }
+    }
+}

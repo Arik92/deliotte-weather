@@ -1,0 +1,23 @@
+<div class="form-container">
+  <div class="header">
+    <h1>Weather Check</h1>
+  </div>
+  <form [formGroup]="cityForm" class="form" (ngSubmit)="addCity()">
+    <div class="name-container">
+      <label for="cityName">Enter City Name:</label>
+      <select formControlName="cityControl" name="cityName" id="cityName">
+        <option *ngFor="let city of cityOptions" [value]="city">{{city | titlecase}}</option>
+      </select>
+      
+    </div>
+    <div class="unit-container">
+      <label for="units">Choose Temperature Units(imperial, metric or standard)</label>
+      <input id="units" formControlName="unitControl" type="text" name="units" required>      
+    </div>
+      
+      
+      
+      
+    <button class="form-btn action-btn" type="submit" [disabled]="!cityForm.valid">+</button>
+  </form>
+</div>
